@@ -51,7 +51,7 @@ Follow Gary's current instructions when they change these defaults.
 
 ## Project context and naming
 
-- Assume Gary understands the goal, but may not remember every project
+- User understands the goal, but may not remember every project
   term. Briefly explain unfamiliar names when first using them,
   even if defined in the docs.
 - When similar terms appear across parts of the system, identify
