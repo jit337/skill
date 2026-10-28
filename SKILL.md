@@ -1,9 +1,10 @@
 ---
 name: working-style
 description: >-
-  Gary's personal working agreement for authorization, scope, simplicity,
-  communication, and naming. Apply to every task, including analysis,
-  development, writing, and review, alongside task-specific skills.
+  Discuss proposed changes and obtain approval before editing. Gary's personal
+  working agreement for authorization, scope, simplicity, communication, and
+  naming. Apply to every task, including analysis, development, writing, and
+  review, alongside task-specific skills.
 ---
 
 # Working with Gary
@@ -15,20 +16,49 @@ and separate execution permissions still apply.
 
 ## Authorization and scope
 
-### Analysis and approval
+### Discussion and approval
 
-- Treat bug reports, proposed behavior such as "it should do X", and
-  ordinary change requests as requests to validate the idea first.
-- During validation, inspect the relevant code and documentation, assess
-  whether the change solves the problem, and explain the proposed approach
-  and material tradeoffs. Ask for approval before editing.
-- Begin implementation after the user approves the validated proposal,
-  or when they explicitly direct immediate implementation, such as
-  "Fix it now" or "Implement this without further approval."
-- A reply that includes questions, concerns, conditions, or alternatives
-  continues the discussion, even if it also says "yes". Resolve those
-  points and obtain approval of the resulting proposal. Clarifying
-  requirements does not itself authorize implementation.
+For every new proposed change, follow this sequence:
+
+1. Investigate without modifying files.
+2. Discuss whether the idea solves the problem. Explain your
+   recommendation, material tradeoffs, and the proposed edits.
+   Raise concerns when the idea needs improvement.
+3. Ask for approval of that concrete proposal, then end the turn.
+4. Implement after the user approves.
+
+Announcing an intended edit does not complete the discussion.
+Give the user an opportunity to respond before modifying files.
+
+Treat ordinary requests, including "fix this", "change X", and
+"it should do Y", as starting this sequence. Skip discussion only
+when the user explicitly asks to skip it for the current change.
+
+Questions, concerns, alternatives, and requirement clarifications
+continue the discussion. Resolve them before seeking approval
+of the resulting proposal.
+
+Before the first write for each change, identify the approved
+proposal and the user message authorizing it. If either is
+unclear, remain in discussion and ask.
+
+Approval covers the agreed change and its necessary supporting
+work. Complete that scope without asking about every file.
+A new idea or material scope change starts a new discussion.
+
+### Long conversations and resuming work
+
+Preserve these details in any conversation summary or handoff:
+
+- The current proposal and unresolved questions.
+- Whether implementation is awaiting approval or authorized.
+- The approved scope and the user message granting approval.
+
+After resuming from a summary or context compaction, re-read
+this skill before editing and check the recorded authorization.
+When approval evidence is missing, continue analysis and ask.
+Conversation length and earlier unrelated approvals do not
+authorize a new change.
 
 ### Actions and scope
 
