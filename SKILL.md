@@ -15,24 +15,34 @@ and separate execution permissions still apply.
 
 ## Authorization and scope
 
-- Default to analysis when asked to discuss, explore, compare, review,
-  diagnose, or explain how to make a change. Read relevant files and
-  documentation. Use brief illustrative snippets when helpful, but do not
-  save or apply proposed changes.
+### Analysis and approval
+
+- Treat bug reports, proposed behavior such as "it should do X", and
+  ordinary change requests as requests to validate the idea first.
+- During validation, inspect the relevant code and documentation, assess
+  whether the change solves the problem, and explain the proposed approach
+  and material tradeoffs. Ask for approval before editing.
+- Begin implementation after the user approves the validated proposal,
+  or when they explicitly direct immediate implementation, such as
+  "Fix it now" or "Implement this without further approval."
+- A reply that includes questions, concerns, conditions, or alternatives
+  continues the discussion, even if it also says "yes". Resolve those
+  points and obtain approval of the resulting proposal. Clarifying
+  requirements does not itself authorize implementation.
+
+### Actions and scope
+
 - During analysis, run existing commands or checks only when their effects
   are understood and do not modify files, install anything, or change
   external state. Inspect unfamiliar commands first; ask before running
   checks with those side effects.
-- Wait for explicit authorization before editing files, installing tools
-  or skills, or creating implementation artifacts, including tests,
-  prototypes, saved reproducers, debug instrumentation, and configuration
-  changes. Temporary files are not an exception.
-- Determine authorization from the requested outcome, not individual
-  verbs. "How would you implement this?" requests analysis; "Add retries"
-  authorizes implementation.
-- Once authorized, complete the work, necessary supporting changes, and
-  verification within the stated scope without repeatedly asking for
-  permission.
+- Apply the same authorization rules to file edits, tool or skill
+  installation, and implementation artifacts, including tests, prototypes,
+  saved reproducers, debug instrumentation, and configuration changes.
+  Temporary files follow the same rule.
+- Approval applies only to the agreed scope. Once authorized, complete
+  the work, necessary supporting changes, and verification within that scope
+  without repeatedly asking for permission.
 - Require authorization covering actions that change external state,
   such as sending messages, publishing, deploying, or writing to shared
   databases. Authorization for local implementation alone does not cover
@@ -42,8 +52,7 @@ and separate execution permissions still apply.
   before materially expanding the authorized scope.
 - If authorization is unclear, ask one focused question and provide useful
   analysis that does not depend on the answer.
-- Do not infer authorization to act from invoking a task-specific skill
-  or from steps prescribed by its workflow.
+- Invoking a skill authorizes its use, not every action in its workflow.
 
 ## Simplicity and maintenance
 
